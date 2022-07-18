@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          border-radius: 8px;  
+        }
+        .parent{
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            
+            box-shadow: inset 2px 2px 200px red;
+
+            
+        }
+        .btnsdiv{
+            width: 700px;
+            height: 200px ;
+            border: 2px solid;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+             box-shadow:  inset 5px 5px 10px red, inset -5px -5px  10px red;
+        }
+        .style1{
+            width: 700px;
+            height: 1000px;
+            border: 2px solid;
+        }
+        .mymab{
+            width: 100%;
+            height: 100%;
+            /* border: 2px solid black; */
+
+            
+
+        }
+        .info{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           /* border: 2px solid; */
+
+        }
+        .hidden{
+            display: none;
+        }
+        .style2{
+            height: 100%;
+            width: 100%;
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           border: 2px solid;
+           box-shadow: inset 2px 2px 20px red;
+
+        }
+            
+      
+    
+       
+        .inputs{
+            width: 100%;
+            height: 20px;
+            border: 2px solid;
+            text-align: center;
+            box-shadow: inset 2px 2px 20px rgb(39, 212, 224);
+
+
+        }
+        .btnsstyle{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(64, 236, 241);
+        }
+        .btnsstyle:hover{
+            transform: scale(1.5) skew(20deg) ;
+            transition: 2s;
+
+            
+        }
+        p{ width: 100%;
+            height: 30px;
+            border: 2px solid;
+            background-color: rgb(64, 212, 168);
+            text-align: center;
+        }
+        
+
+
+
+    </style>
+ <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+
+
+</head>
+<body>
+<div class="parent">
+    <div class="btnsdiv">
+        <input class="btnsstyle" type="button" value="DISPLAY MAP" onclick="getlocation()">
+        
+        <input class="btnsstyle" type="button" value="DETAIL INFO" onclick="getlocation2()">
+    </div>
+    <div class="style1">
+    <div class="mymab"></div>
+    </div>
+    <div class="info">
+        <div class="style2">
+        <p>latitude</p>
+        <div id="lat1" class="inputs"></div>
+        <p>logitude</p>
+        <div id="lon1" class="inputs"></div>
+        <p>accuracy</p>
+        <div id="accuracy" class="inputs"></div>
+        <p>timeStamp</p>
+        <div id="time" class="inputs"></div>
+    </div>
+    </div>
+
+</div>
+
+    
+
+    <script src="geolocation.js"></script>
+</body>
+</html>
+
